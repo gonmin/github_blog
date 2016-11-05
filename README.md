@@ -32,3 +32,17 @@ function Striped(elements) {
   }
 }
 ```
+###添加一个类名
+通过className属性添加类名时，会覆盖元素原来的类名，所以这里封装一个函数解决
+```javascript
+function addClass(element,value){
+  if (!element.className){
+    element.className = value;
+  } else {
+    newClassName = element.className;
+    newClassName += " ";
+    newClassName += value;
+    element.className = newClassName;
+  }
+ }
+```
