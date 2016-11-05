@@ -46,3 +46,21 @@ function addClass(element,value){
   }
  }
 ```
+###删除一个类名
+如果只是想删除元素的一个特定类名，可以通过如下函数解决
+```javascript
+function removeClass(element, value) {
+  var classNames = element.className.split(" ");//把取得的类名字符串转成数组
+  var pos = -1,
+      i,
+      len;
+  for (i=0,len=classNames.length; i<len; i++) {
+    if (classNames[i] == value) {
+      pos=i;
+      break;
+    }
+  }
+  classNames.splice(pos,1);//splice() 方法向/从数组中添加/删除项目，然后返回被删除的项目
+  element.className = classNames.join(" ");//再将数组转成字符串
+ }
+```
