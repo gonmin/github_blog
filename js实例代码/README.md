@@ -1,66 +1,101 @@
-#封装的javascript函数
+#常用的javascript实例代码
 
-###1.共享onload事件
-因为后面的window.onload会覆盖前面的
+###1.回到顶部代码
 ```javascript
-function addLoadEvent(func) {
-  var oldonload = window.onload;
-  if (typeof window.onload != "function") {
-    window.onload = func;
-  } else {
-    window.onload = function(){
-      oldonload();
-      func();
-    }
-  }
+window.onload = function(){
+	var clientH = document.documentElement.clientHeight || document.body.clientHeight;
+	var btn = document.getElementById('btn');
+	var timer = null;
+	window.onscroll = function(){
+		var scrollT = document.documentElement.scrollTop || document.body.scrollTop;
+		if (scrollT > clientH){
+			btn.style.display = "block";
+		} else {
+			btn.style.display = "none";
+		}
+	}
+	btn.onclick = function(){
+		timer = setInterval(function(){
+			var scrollT = document.documentElement.scrollTop || document.body.scrollTop;
+			var ispeed = Math.floor(-scroll/6);
+			document.documentElement.scrollTop = document.body.scrollTop = scrollT + ispeed;
+			    console.log(scrollT);
+			if (scrollT == 0){
+				clearInterval(timer);
+			}
+		}, 30);
+	}
 }
 ```
-###2.单双行的交替样式的js文件
-给表格的的行加上斑马条纹样式，参数elements为需要行的元素集合
-
-ie9以上的浏览器可以直接用CSS3的:nth-child() 选择器，即:nth-child(odd)或nth-child(even)
+###2.js焦点轮播图代码
 ```javascript
-function Striped(elements) {
-  var odd = false;
-  for (var j=0; j<elements.length;j++){
-    if (odd == true) {
-      elements[j].style.backgroundColor = "red";
-      odd = false;
-    } else {
-      odd = true;
+var wrap=document.getElementById('wrap'),
+    pic=document.getElementById('pic'),
+    list=document.getElementById('list').getElementsByTagName('li'),
+    next=document.getElementById('next'),
+    prev=document.getElementById("prev"),
+    index=0,
+    timer=null;
+
+function auto(){
+  timer=setInterval(function(){
+    index++;
+    if(index>=list.length){
+      index=0;
     }
+    change(index);
+  },2000);  
+}
+auto();
+function change(curIndex){
+  pic.style.marginTop=-170*curIndex+'px';
+  for(var n=0;n<list.length;n++){
+      list[n].className='';
+  }
+  list[curIndex].className='on';
+  index=curIndex;
+}
+wrap.onmouseover=function(){
+  clearInterval(timer);
+}
+wrap.onmouseout=auto;
+for(var i=0;i<list.length;i++){
+  list[i].id=i;
+  list[i].onmouseover=function(){
+    change(this.id);          
   }
 }
+next.onclick = function(){
+  index++;
+  if (index >= list.length){
+    index = 0;
+  }
+  change(index);
+};
+prev.onclick = function(){
+  index--;
+  if (index < 0){
+    index = list.length-1;
+  }
+  change(index);
+};
 ```
-###添加一个类名
+###tab切换代码
 通过className属性添加类名时，会覆盖元素原来的类名，所以这里封装一个函数解决
 ```javascript
-function addClass(element,value){
-  if (!element.className){
-    element.className = value;
-  } else {
-    newClassName = element.className;
-    newClassName += " ";
-    newClassName += value;
-    element.className = newClassName;
-  }
- }
-```
-###删除一个类名
-如果只是想删除元素的一个特定类名，可以通过如下函数解决
-```javascript
-function removeClass(element, value) {
-  var classNames = element.className.split(" ");//把取得的类名字符串转成数组
-  var pos = -1,
-      i,
-      len;
-  for (i=0,len=classNames.length; i<len; i++) {
-    if (classNames[i] == value) {
-      pos=i;
-      break;
+var tab = document.getElementById('tab');
+var as = tab.getElementsByTagName('a');
+var box = document.getElementById('box');
+var forms = box.getElementsByTagName('form');
+for (var i = 0; i < as.length; i++) {
+  as[i].id = i;
+  as[i].onclick = function(){
+    for (var j = 0; j < as.length; j++) {
+      as[j].className = '';
+      forms[j].style.display = 'none';
     }
+    this.className = 'on';
+    forms[this.id].style.display = 'block';
   }
-  classNames.splice(pos,1);//splice() 方法向/从数组中添加/删除项目，然后返回被删除的项目
-  element.className = classNames.join(" ");//再将数组转成字符串
- }
+}
 ```
