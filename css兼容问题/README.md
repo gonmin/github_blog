@@ -4,9 +4,9 @@
 /*固定于顶部*/
 ```css
 #top { 
-_position: absolute; 
-_bottom: auto; 
-_top: expression(eval(document.documentElement.scrollTop)); 
+  _position: absolute; 
+  _bottom: auto; 
+  _top: expression(eval(document.documentElement.scrollTop)); 
 }
 ```
 /*固定于底部*/
