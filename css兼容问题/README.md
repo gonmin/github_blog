@@ -1,32 +1,19 @@
-#常用的javascript实例代码
+#css的浏览器兼容性问题
 
-###1.回到顶部代码
-```javascript
-window.onload = function(){
-	var clientH = document.documentElement.clientHeight || document.body.clientHeight;
-	var btn = document.getElementById('btn');
-	var timer = null;
-	window.onscroll = function(){
-		var scrollT = document.documentElement.scrollTop || document.body.scrollTop;
-		if (scrollT > clientH){
-			btn.style.display = "block";
-		} else {
-			btn.style.display = "none";
-		}
-	}
-	btn.onclick = function(){
-		timer = setInterval(function(){
-			var scrollT = document.documentElement.scrollTop || document.body.scrollTop;
-			var ispeed = Math.floor(-scroll/6);
-			document.documentElement.scrollTop = document.body.scrollTop = scrollT + ispeed;
-			    console.log(scrollT);
-			if (scrollT == 0){
-				clearInterval(timer);
-			}
-		}, 30);
-	}
+###1.ie6下兼容position:fixed
+/*固定于顶部*/
+#top { 
+_position: absolute; 
+_bottom: auto; 
+_top: expression(eval(document.documentElement.scrollTop)); 
 }
-```
+/*固定于底部*/
+#bottom { 
+_position: absolute; 
+_bottom: auto; 
+_top: expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0))); 
+}
+
 ###2.js焦点轮播图代码
 ```javascript
 var wrap=document.getElementById('wrap'),
