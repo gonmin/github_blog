@@ -64,4 +64,3 @@ function removeClass(element, value) {
   element.className = classNames.join(" ");//再将数组转成字符串
  }
 ```
-哈哈，这次你就认不出来了。
