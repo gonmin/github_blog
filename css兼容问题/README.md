@@ -2,16 +2,18 @@
 
 ###1.ie6下兼容position:fixed
 /*固定于顶部*/
+```css
 #top { 
 _position: absolute; 
 _bottom: auto; 
 _top: expression(eval(document.documentElement.scrollTop)); 
 }
+```
 /*固定于底部*/
 #bottom { 
-_position: absolute; 
-_bottom: auto; 
-_top: expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0))); 
+  _position: absolute; 
+  _bottom: auto; 
+  _top: expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0))); 
 }
 
 ###2.js焦点轮播图代码
