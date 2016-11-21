@@ -6,3 +6,9 @@
 2.用yeoman生成项目的方式是yo + 什么项目+项目名称，比如`yo angular +项目名称`，生成angular的项目。
 
 3.生成项目时，需要选择包是，空格代表选择和取消选择。
+
+###bower
+1.bower安装文件bower install +名称，比如`bower install jquery`
+
+2.如果没有注册，可以通过githubxie短写安装。
+
