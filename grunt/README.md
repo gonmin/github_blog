@@ -12,3 +12,5 @@
 
 2.如果没有注册，可以通过githubxie短写安装。
 
+3.如果没有bower.json的话，通过bower init生成。
+
