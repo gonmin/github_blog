@@ -14,3 +14,13 @@
 
 3.如果没有bower.json的话，通过bower init生成。
 
+4.在如果要添加到devdepences,则使用bower install --save-dev
+
+5.增加到生产环境的话 则使用 bower install --save。
+
+6.说到使用script的麻烦
+
+7.在bower中说到了bower生成文件。bower install ,然后是生成bower.json,然后引用script的时候说要结合grunt来说。
+
+###grunt
+第一节重点介绍gruntfile.js
