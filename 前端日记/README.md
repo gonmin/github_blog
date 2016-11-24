@@ -15,3 +15,10 @@
 3.很多问题，可以通过尝试让ie6下拥有布局来解决，比如可以加上position: relative。width,heigt
 
 4.ie6下定义小于12px的元素会自动扩展。可以设置字体为零。
+
+###11月24日
+1.:nth-child()选择器，:nth-last-child()选择器，:nth-of-type()选择器，支持的浏览器都是ie9及以上。
+
+2.nth-last-child()选择器会受script元素影响。liu'lan'qi
+
+3.CSS3 element1~element2 选择器，element1 之后出现的所有 element2。注意element1和element2必须有相同的父元素。
