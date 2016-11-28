@@ -22,3 +22,5 @@
 2.nth-last-child()选择器会受script元素影响。liu'lan'qi
 
 3.CSS3 element1~element2 选择器，element1 之后出现的所有 element2。注意element1和element2必须有相同的父元素。
+###11月28
+1.：after选择器，在被选元素后面加入内容，使用**content**来指定加入的内容
