@@ -24,3 +24,6 @@
 3.CSS3 element1~element2 选择器，element1 之后出现的所有 element2。注意element1和element2必须有相同的父元素。
 ###11月28
 1.：after选择器，在被选元素后面加入内容，使用**content**来指定加入的内容
+###12月5
+1.concat(),基于当前数组的所有项创建新的数组。
+2.
