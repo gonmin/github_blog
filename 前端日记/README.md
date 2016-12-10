@@ -35,3 +35,7 @@
 
 5.**es5**迭代方法every，每一个都正确时才返回true，some()，有一项正确时就返回true。filter()，返回符合条件的项。map()对每一项进行某些操作。forEach，遍历某些操作
 6.缩小方法reduce()。
+###2016 12 10
+1.一个域名地址的组成包括。协议、子域名、主域名、端口号、请求资源的地址。比如https://github.com/gonmin/github_blog/edit/master/%E5%89%8D%E7%AB%AF%E6%97%A5%E8%AE%B0/README.md。。https为协议名。www为子域名，github.com为主域名。后面的一大串为请求资源的地址。
+
+2.当协议、子域名、主域名、端口号中任何一个不一样的时候都算做是不同的域。
