@@ -39,3 +39,14 @@
 1.一个域名地址的组成包括。协议、子域名、主域名、端口号、请求资源的地址。比如https://github.com/gonmin/github_blog/edit/master/%E5%89%8D%E7%AB%AF%E6%97%A5%E8%AE%B0/README.md。。https为协议名。www为子域名，github.com为主域名。后面的一大串为请求资源的地址。
 
 2.当协议、子域名、主域名、端口号中任何一个不一样的时候都算做是不同的域。
+###2016 12 14
+1.错误处理的try-catch语句
+
+```javascript
+try{
+//可能出现错误的代码
+}catch(error) {
+//在错误发生时怎样去处理
+}
+```
+error对象有两个属性，name和message提示错误的类型。name定义的是错误的类型。
