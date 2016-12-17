@@ -1,9 +1,14 @@
-#css3笔记
-1.css3长度单位vh。 相对于视口的高度。视口被均分为100单位的vh
+#gulp总结
+###js压缩
+1.**gulp的安装**，使用`npm install gulp -g`将gulp安装到全局
 
-2.background-size: contain 把图像图像扩展至最大尺寸，以使其宽度和高度完全适应内容区域。
+2.安装gulp和压缩需要的gulp-uglify,国内的情况下，使用淘宝的cnpm install gulp 和cnpm install gulp-uglify
 
-3.CSS3的calc()，border、margin、pading、font-size和width等值设置动态值。
-###2016 11 23
-1.transition-timing-function 属性规定过度效果的速度曲线。值为linear时以相同的速度开始和结束。值为ease-in，以慢速开始的速度的曲线。
+3.在根目录下建gulpfile.js文件，以下为gulpfile.js文件中的内容
 
+```javascript
+//引入上述两个模块
+var gulp = require('gulp');
+var uglify = require('gulp-uglify');
+
+```
