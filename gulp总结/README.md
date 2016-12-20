@@ -10,5 +10,10 @@
 //引入上述两个模块
 var gulp = require('gulp');
 var uglify = require('gulp-uglify');
-
+//接着开始写task
+gulp.task('firstScript',function(){
+  gulp.src('script/*.js')
+      .pipe(uglify())
+      .pipe(gulp.dest('newScript'));
+};
 ```
