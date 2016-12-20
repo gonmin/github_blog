@@ -17,3 +17,4 @@ gulp.task('firstScript',function(){
       .pipe(gulp.dest('newScript'));
 };
 ```
+4.在工作目录安装gulp  `npm install --save-dev gulp`
