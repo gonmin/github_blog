@@ -1,4 +1,16 @@
 #gulp总结
+###常用的gulp模块
+1.gulp-uglify  压缩javascript代码
+
+2.gulp-minify-css 压缩css
+
+3.gulp.spritsmith 压缩图片做成轮播图
+
+4.gulp-concat 合并文件
+
+5.gulp-rename 重命名
+
+6.gulp-watch-path 监控文件
 ###js压缩
 1.**gulp的安装**，使用`npm install gulp -g`将gulp安装到全局
 
