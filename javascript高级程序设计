@@ -1,1 +1,2 @@
-
+####8.5 history对象
+1.两个方法back()和forward(),这两个方法和浏览器的后退和前进方法是一样的，history.back()代表后退一页，history.forward()表示前进一页。
