@@ -50,3 +50,8 @@ try{
 }
 ```
 error对象有两个属性，name和message提示错误的类型。name定义的是错误的类型。
+###2016 12 27
+1.fis release 将fis 投送到指定根目录
+2.fis3 server start开启服务
+4.fis3 sserver open  打开根目录
+5.fis3 release -h 查看fis release 的帮助
