@@ -1,18 +1,15 @@
-###window cmd命令
-1.在window环境下当打开cmd,一般是在默认的document目录下，如果进入d盘，快捷键为d:
-
-2.进入某个目录，为cd + 目录名称
-
-3.创建新目录为mkdir+你想起的目录名称
-
-4.pwd查看当前目录
-
-5.ls -al列出详细文件。。。ls查看目录信息
-
-6.删除目录：rm -rf +目录名称。意思为递归删除并且不需要二次确认
-7.vi +文件名可以查看文件的内容
-
-npm install -g npm@特定版本可以更新到特定版本。
-###windows 下
-1.dir 列出文件列表
-2.cls清空命令行窗口内容
+###多用的知识总结
+1.有时候需要验证输入内容的长度，一个汉字2个字节，一个英文字母一个字节。这个如何实现呢。很明显需要判断出汉子汉字并进行处理。汉字的正则表单式范围是/[\u4e00-\u9fa5]/。下面为计算内容长度的一个函数
+```javascript
+function content_l(string){
+  var string_length = 0;
+  for (var i = 0; i < string.length; i++) {
+    if((/[\u4e00-\u9fa5]/).test(string[i])){
+      string_length +=2;
+    }else {
+      string_length +=1;
+    }
+  }
+  return string_length;
+}
+```
