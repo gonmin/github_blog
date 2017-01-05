@@ -60,3 +60,6 @@ error对象有两个属性，name和message提示错误的类型。name定义的
 1.点击type的值为submit的input,或者button元素就会提交表单，或者是input元素的type属性值为image时，也会提交表单。以这种方式提交表单的时候，浏览器会在发送到服务器之前触发submit事件，这样就可以检验表单数据，阻止这个事件的默认行为就可以取消表单的提交。直接调用form的submit()方法也是可以提交表单，以这种方式不会触发submit事件，所以调用之前要验证表单数据。
 
 2.其他，button按钮的type默认值是submit。所以直接提交。
+###2017 1 5
+
+1.vue，通过v-bind设置属性。
