@@ -63,3 +63,10 @@ error对象有两个属性，name和message提示错误的类型。name定义的
 ###2017 1 5
 
 1.vue，通过v-bind设置属性。
+###2017 2 13
+
+1.webpack文件目录，首先是build和config都是webpack配置相关
+2.node_module。是通过npm安装的依赖代码库
+3.src是存放项目源码
+4.第三方静态资源
+
