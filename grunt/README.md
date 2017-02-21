@@ -24,3 +24,8 @@
 
 ###grunt
 第一节重点介绍gruntfile.js
+
+
+###webpack
+
+1-2：讲诉的内容是实战的开始。npm init 创建一个package.jgon。然后就是npm install webpack。然后建立一个hello.js。再用命令webpack hello.js web-hello.js即进行打包。然后再新建一个world.js文件，并在hello.js中引入world.js，并再次进行如上的打包操作。然后在hello.js中通过，通过require，引用style.css。这时出现错误。所以需要安装css-loader。和style-loader。并在require之前加了css-loader。发现正常啦。
