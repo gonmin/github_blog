@@ -39,7 +39,9 @@
 ```javascript
 plugins: [
   new htmlWebpackPlugin({
-    template: 'index.html'//以原本的为模板
-  })
+    filename: 'kd.html' //指定名称
+    template: 'index.html'//以原本的为模板
+    inject
+  })
 ]
 ```
