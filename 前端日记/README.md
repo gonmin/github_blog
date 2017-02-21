@@ -69,4 +69,5 @@ error对象有两个属性，name和message提示错误的类型。name定义的
 2.node_module。是通过npm安装的依赖代码库
 3.src是存放项目源码
 4.第三方静态资源
-
+###2017 2 21
+1.css-loader的作用是使能通过require请求css文件。style-loader的作用是将打包后的css文件放在引入到html中。
