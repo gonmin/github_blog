@@ -28,4 +28,18 @@
 
 ###webpack
 
-1-2：讲诉的内容是实战的开始。npm init 创建一个package.jgon。然后就是npm install webpack。然后建立一个hello.js。再用命令webpack hello.js web-hello.js即进行打包。然后再新建一个world.js文件，并在hello.js中引入world.js，并再次进行如上的打包操作。然后在hello.js中通过，通过require，引用style.css。这时出现错误。所以需要安装css-loader。和style-loader。并在require之前加了css-loader。发现正常啦。
+1-2：讲诉的内容是实战的开始。npm init 创建一个package.jgon。然后就是npm install webpack。然后建立一个hello.js。再用命令webpack hello.js web-hello.js即进行打包。然后再新建一个world.js文件，并在hello.js中引入world.js，并再次进行如上的打包操作。然后在hello.js中通过，通过require，引用style.css。这时出现错误。所以需要安装css-loader。和style-loader。并在require之前加了css-loader。发现正常啦。。在css中加入背景颜色。发现并没有生效。后面发现加上style-loader在require前面就可以了。。在命令中加入--watch。可以监控自动更新。
+
+2-1：讲配置文件webpack.config.js的建立，定义了entry入口文件。出口文件，出口文件名，那就可以通过webpack来运行了。然后可以在package.json中的scrpts中定义，就可以。npm run webpack。并且的话是有配置了其他的参数。
+
+2-2：讲了多口的情况。entry。数组或者对象。用对象的时候。，输出的文件为了区别开来，可以用[name],[hash]。。。对应的文件是test3..
+
+3-1： 出口文件用了hash以后是不一样的。导致在html中指定的麻烦。所以.用html-webpack-plugin去解决。
+
+```javascript
+plugins: [
+  new htmlWebpackPlugin({
+    template: 'index.html'//以原本的为模板
+  })
+]
+```
