@@ -60,4 +60,52 @@ ejs语法。如果是表达式的话。要去掉<%=，中的=
 ```
 然后说如果要上线的话，需要加上域名。实现方式是在output中加入 publicPath:'htttp://cdn.com/',最后讲了压缩的情况，见上
 
-3-3： htmlWebpackPlugin的内容在npmjs.com中可以看到。多页面的情况。复制多一个new htmlWebpackPlugin()
+3-3： htmlWebpackPlugin的内容在npmjs.com中可以看到。多页面的情况。复制多一个new htmlWebpackPlugin()。要引入不同的js.可以在chunks中指定。excludechunks。排除的chunks.最后讲优化的东西。我没看了。。最后的代码情况
+
+```javascript
+var htmlWebpackPlugin = require('html-webpack-plugin');
+module.exports = {
+	entry: {
+		main: './src/scripts/main.js',
+		a: './src/scripts/a.js'
+	}, 
+	output: {
+		path: './dist',
+		filename: 'js/[name].js'
+	},
+	module: {
+		loaders: [
+			{
+				test: /\.css$/,
+				loader: 'style-loader!css-loader'
+			},
+		]
+	},
+	plugins: [
+		new htmlWebpackPlugin({
+			filename: 'main.html', // 指定名称
+			template: 'index.html', //以原本的为模板
+			inject: 'body', //放在head标签还是body标签
+			title: 'gongming', //使用ejs语法在html中定义
+			chunks: ['main','a'],
+			minify: {
+				removeComments: true,
+				minifyJS: true,
+				minifyCSS: true
+			}
+		}),
+		new htmlWebpackPlugin({
+			filename: 'a.html', // 指定名称
+			template: 'index.html', //以原本的为模板
+			inject: 'body', //放在head标签还是body标签
+			title: 'gongming', //使用ejs语法在html中定义
+			chunks: ['a'],
+			minify: {
+				removeComments: true,
+				minifyJS: true,
+				minifyCSS: true
+			}
+		})
+	]
+}
+```
