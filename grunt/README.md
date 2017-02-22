@@ -41,7 +41,23 @@ plugins: [
   new htmlWebpackPlugin({
     filename: 'kd.html' //指定名称
     template: 'index.html'//以原本的为模板
-    inject
+    inject: 'body' //值为body,或者head。表示js在body或者head标签中
+    data: 'webpack is use ejs语法' //使用ejs语法。<%= htmlWebpackPlugin.options.title %> 
+    minify: {
+      collapseWhitespace: true //删除html空白
+      removeComments: true //删除注释
+      minifyJS: true //压缩html文件中<script></script>中的内容。
+    }
   })
 ]
 ```
+ejs语法。如果是表达式的话。要去掉<%=，中的=
+
+3-2： 讲述的内容是，先说ejs语法。然后说如何将一个js文件放在head中另一个js放在body中。。实现代码为
+```html
+	<script type="text/javascript" src="<%= htmlWebpackPlugin.files.chunks.a.entry %>"></script>
+
+```
+然后说如果要上线的话，需要加上域名。实现方式是在output中加入 publicPath:'htttp://cdn.com/',最后讲了压缩的情况，见上
+
+3-3： htmlWebpackPlugin的内容在npmjs.com中可以看到。多页面的情况。复制多一个new htmlWebpackPlugin()
