@@ -109,3 +109,10 @@ module.exports = {
 	]
 }
 ```
+
+
+####第四部分
+4-1：对文件进行设置并介绍loader的一些内容
+
+
+4-2： 介绍babel的情况。并需要制定要转换那个版本的js。指定方式有三个分别是package.json中加babel。在loader下面加query。最后一种是加一个babel文件。可以使用exclud和include。提升速度
