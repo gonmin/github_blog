@@ -116,3 +116,68 @@ module.exports = {
 
 
 4-2： 介绍babel的情况。并需要制定要转换那个版本的js。指定方式有三个分别是package.json中加babel。在loader下面加query。最后一种是加一个babel文件。可以使用exclud和include。提升速度
+
+
+4-3: 慕课网webpack视频代码
+
+
+```javascript
+var htmlWebpackPlugin = require('html-webpack-plugin');
+var path = require('path');
+
+module.exports = {
+	entry: './src/app.js',
+	output: {
+		path: './dist',
+		filename: 'js/[name].bundle.js'
+	},
+	module: {
+		loaders: [
+			{
+				test: /\.js$/,
+				loader: 'babel-loader',
+				include: path.resolve(__dirname, 'src'),
+				exclude: path.resolve(__dirname, 'node_modules'),
+				include: './src/',
+				query: {
+					presets: ['latest']
+				}
+			},
+			{
+				test: /\.html$/,
+				loader: 'html-loader'
+			},
+			{
+				test: /\.tpl$/,
+				loader: 'ejs-loader'
+			},
+			{
+				test: /\.css$/,
+				loader: 'style-loader!css-loader?importLoaders=1!postcss-loader'
+			},
+			{
+				test: /\.styl$/,
+				loader: 'style-loader!css-loader!postcss-loader!stylus-loader'
+			},
+			{
+				test: /\.less$/,
+				loader: 'style-loader!css-loader!postcss-loader!less-loader'
+			},
+			{
+				test: /\.(png|jpg|gif|svg)$/i,
+				loaders:[
+					'url-loader?limit=10000&name=assets/[name]-[hash:5].[ext]',
+					'image-webpack-loader'
+				] 
+			}
+		]
+	},
+	plugins: [
+		new htmlWebpackPlugin({
+			filename: 'index.html',
+			template: 'index.html',
+			inject: 'body'
+		})
+	]
+}
+```
