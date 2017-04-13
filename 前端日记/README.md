@@ -75,3 +75,9 @@ error对象有两个属性，name和message提示错误的类型。name定义的
 ###2017 4 2
 
 win+r。打开运行，然后的话键入 services.msc 找到windows更新
+
+###2017 4/ 13
+
+1.let 命令，只在所在的代码块内有效
+
+2.for循环的计数器很适合用let。
