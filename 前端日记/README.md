@@ -112,5 +112,5 @@ win+r。打开运行，然后的话键入 services.msc 找到windows更新
 
 1.用svg制作字体图标的方法。网站 https://icomoon.io/  
 
-2.然后点击
+2.然后点击iconmoon app 跳到另外一个页面 。。然后点击import icons 上传图标。然后再点击generate font 可以点击references进行配置
 
