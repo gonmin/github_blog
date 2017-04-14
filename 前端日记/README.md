@@ -108,3 +108,9 @@ win+r。打开运行，然后的话键入 services.msc 找到windows更新
 
 9。手机或者电话号码/0\d{2}[- ]?\d{8}|0\d{3}[- ]?d{7}|1\d{10}/.test('lkkjgfhhg')
 
+### 2017 4 14
+
+1.用svg制作字体图标的方法。网站 https://icomoon.io/  
+
+2.然后点击
+
