@@ -114,3 +114,7 @@ win+r。打开运行，然后的话键入 services.msc 找到windows更新
 
 2.然后点击iconmoon app 跳到另外一个页面 。。然后点击import icons 上传图标。然后再点击generate font 可以点击references进行配置
 
+###es6
+
+1.es5的对象，键值只能是字符串，es6的map方法，键值可以是其他数据类型
+
