@@ -123,3 +123,5 @@ win+r。打开运行，然后的话键入 services.msc 找到windows更新
 ###### crypto模块
 
 1.crypot 模块的目的是提供通用的加密和哈希算法。
+
+2.nodejs学习网站stackoverflow。
