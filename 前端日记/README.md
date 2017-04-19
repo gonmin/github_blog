@@ -143,3 +143,19 @@ win+r。打开运行，然后的话键入 services.msc 找到windows更新
 7.background-size 设置背景图片大小。
 
 二、在es6之前，社区制定了一些标准，主要有commonjs和AMD.。
+
+1.export 输出方式
+
+```javascript
+export var firstName = 'Michael';
+export var lastName = 'Jackson';
+export var year = 1958;
+
+// 或者 优先使用这种方式
+var firstName = 'Michael';
+var lastName = 'Jackson';
+var year = 1958;
+
+export {firstName, lastName, year}; //那怕是一个也要加{}
+//另外可以加as改输出的名字 ，另外export一定要在最外层。
+```
