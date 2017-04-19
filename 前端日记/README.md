@@ -159,3 +159,10 @@ var year = 1958;
 export {firstName, lastName, year}; //那怕是一个也要加{}
 //另外可以加as改输出的名字 ，另外export一定要在最外层。
 ```
+###### 模块的整体加载
+
+1.import * as circle from './circle'; 就是然后用circle.xx。即取属性的方式进行使用
+
+###### 重要的export default。
+
+1.意思是用export default 输出。当然只能一个。然后的话import的时候可以自己命名。并且不需要加{}
