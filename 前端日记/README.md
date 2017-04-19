@@ -141,3 +141,5 @@ win+r。打开运行，然后的话键入 services.msc 找到windows更新
 6.css3背景 background-clip 将背景图片做适当的裁剪，以适合实际的开发
 
 7.background-size 设置背景图片大小。
+
+二、在es6之前，社区制定了一些标准，主要有commonjs和AMD.。
