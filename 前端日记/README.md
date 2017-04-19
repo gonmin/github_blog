@@ -135,3 +135,9 @@ win+r。打开运行，然后的话键入 services.msc 找到windows更新
 3.嵌入字体 @font-face
 
 4.文本阴影。 text-shadow
+
+5.css3背景 background-origin: 设置背景图片的原始起始位置
+
+6.css3背景 background-clip 将背景图片做适当的裁剪，以适合实际的开发
+
+7.background-size 设置背景图片大小。
