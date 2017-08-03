@@ -26,3 +26,6 @@ position:absolute;
 top:50%;
 margin-top:-4px;
 right:2px;
+
+### 2017 08 03
+1. 最老版的flex布局 display: box; box-flex: 1;
