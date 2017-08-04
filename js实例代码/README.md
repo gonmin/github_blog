@@ -99,3 +99,47 @@ for (var i = 0; i < as.length; i++) {
   }
 }
 ```
+
+### 删除数组相同的项
+```javascript
+let arr = [
+		{
+			id: 5
+		},
+		{
+			id: 4
+		},
+		{
+			id: 5
+		},
+		{
+			id: 4
+		},
+		{
+			id: 3
+		}
+	]
+
+	arr.forEach(value => {
+		arr.forEach(value1 => {
+			if (value.id ){}
+		})
+	})
+	let result = [];
+	for (var i = 0; i < arr.length; i++) {
+			let n = 0;
+		// arr[i]
+		for (var j = i+1; j < arr.length; j++) {
+			if (arr[i].id === arr[j].id ) {
+				n++
+			}
+			console.log(n);
+
+
+		}
+		if (n === 0) {
+		    result.push(arr[i])
+
+		}
+	}
+```
