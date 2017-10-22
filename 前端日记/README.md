@@ -166,3 +166,13 @@ export {firstName, lastName, year}; //那怕是一个也要加{}
 ###### 重要的export default。
 
 1.意思是用export default 输出。当然只能一个。然后的话import的时候可以自己命名。并且不需要加{}
+
+### 2017 10 22
+清除浮动
+```
+.clf:after {
+	clear: both;
+	content: '';
+	display: table;
+}
+```
