@@ -175,4 +175,13 @@ export {firstName, lastName, year}; //那怕是一个也要加{}
 	content: '';
 	display: table;
 }
+.clearfix:before,
+.clearfix:after {
+	display: table;
+	content: '';
+}
+.clearfix:after {
+	clear: both;
+}
+
 ```
